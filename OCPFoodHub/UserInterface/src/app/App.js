@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AppHeader from "../common/AppHeader";
 import Home from "./Home";
 import Login from "../user/Login";
@@ -77,6 +77,7 @@ class App extends Component {
           />
         </div>
         <div className="app-body">
+          
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/form" component={Form} />

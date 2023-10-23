@@ -1,193 +1,100 @@
+/* Signup Page Styles */
 .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #16b47b;
+  }
+  
+  .signup-content {
+    display: grid;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+  }
+  
+  .signup-title {
+    color: #16b47b;
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+  }
+  
+  /* Form Styles */
+  .form-item {
+    margin-bottom: 15px;
+  }
+  
+  /* Submit Button Styles */
+  .btn-primary {
+    background-color: #16b47b; /* Green button background color */
+    color: #fff; /* White button text color */
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    vertical-align: center;
+    
+  }
+  
+  .btn-primary:hover {
+    background-color: #005aa7;
+  }
+
+  /* Add these styles to your CSS file */
+
+.dietary-label {
+  color: #16b47b;
+}
+
+.dietary-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.dietary-option {
+  margin-right: 16px;
+}
+
+.favLoc-label {
+  color: #16b47b;
+}
+
+.favLoc-control {
+  margin-bottom: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 
-.signup-content {
-    background: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 2px;
-    width: 400px;
-    display: inline-block;
-    margin-top: 30px;
-    vertical-align: middle;
-    position: relative;
-    padding: 35px;
-}
+/* You can add additional styles as needed */
 
-.social-btn {
-    margin-bottom: 10px;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-.social-btn img {
-    height: 32px;
-    float: left;
-    margin-top: 10px;
-}
-
-.social-btn.google {
-    margin-top: 20px;
-}
-
-.social-btn.google img {
-    height: 30px;
-    margin-left: 3px;
-    margin-top: 1px;
-}
-
-.social-btn.facebook img {
-    height: 25px;
-    margin-left: 3px;
-    margin-top: 4px;
-}
-
-.login-link {
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 13px;
-}
-
-.signup-title {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.65);
-}
-
-.firstname-control {
-    margin: 0;
-    padding: 0;
-    margin-left: -2px;
-    margin-right: 10px;
-    list-style: none;
-    display: inline-block;
-    padding: 4px 11px;
-    width: 158px;
-    height: 35px;
-    font-size: 0.87em;
-    line-height: 35px;
-    color: rgba(0,0,0,.80);
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    transition: all .3s;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
-.lastname-control {
-    margin: 0;
-    padding: 0;
-    margin-left: 0px;
-    margin-right: 0px;
-    list-style: none;
-    display: inline-block;
-    padding: 4px 11px;
-    width: 162px;
-    height: 35px;
-    font-size: 0.87em;
-    line-height: 35px;
-    color: rgba(0,0,0,.80);
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    transition: all .3s;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
-.leftform-control {
-    margin: 0;
-    padding: 0;
-    margin-left: -1px;
-    margin-right: 10px;
-    list-style: none;
-    display: inline-block;
-    padding: 4px 11px;
-    width: 67%;
-    height: 35px;
-    font-size: 0.87em;
-    line-height: 35px;
-    color: rgba(0,0,0,.80);
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    transition: all .3s;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
-.rightform-control {
-    margin: 0;
-    padding: 0;
-    margin-left: 0px;
-    list-style: none;
-    display: inline-block;
-    padding: 4px 11px;
-    width: 30%;
-    height: 35px;
-    font-size: 0.87em;
-    line-height: 35px;
-    color: rgba(0,0,0,.80);
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    transition: all .3s;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
-.error-message {
-    color: red;
-    margin-bottom: 5px;
-    float: left;
-    font-size: 0.87em;
-}
-
-
-.totaltables-control {
-    margin: 0;
-    padding: 0;
-    margin-left: -2px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    list-style: none;
-    display: inline-block;
-    padding: 4px 11px;
-    width: 158px;
-    height: 35px;
-    font-size: 0.87em;
-    line-height: 35px;
-    color: rgba(0,0,0,.80);
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    transition: all .3s;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
-.totaloccupancy-control {
-    margin: 0;
-    padding: 0;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 10px;
-    list-style: none;
-    display: inline-block;
-    padding: 4px 11px;
-    width: 162px;
-    height: 35px;
-    font-size: 0.87em;
-    line-height: 35px;
-    color: rgba(0,0,0,.80);
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    transition: all .3s;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
+  
+  /* Input Styles */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Placeholder Styles */
+  .form-control::placeholder {
+    color: #999;
+  }
+  
+  /* Read-only Input Styles */
+  .form-control[readonly] {
+    background-color: #eee;
+  }
+  

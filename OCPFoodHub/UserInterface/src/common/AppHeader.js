@@ -1,44 +1,56 @@
-import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './AppHeader.css';
+import logo from '../resources/ocp-logo.svg';
 
+function AppHeader() {
+  const [showSignUp, setShowSignUp] = useState(false);
 
-class AppHeader extends Component {
-    render() {
-        return (
-            <header className="app-header">
-                <div className="container">
-                    
-                    <div className="app-branding">
-                        <Link to="/" className="app-title">Food Bolt</Link>
-                    </div>
-                    <div className="app-options">
-                        <nav className="app-nav">
-                                { this.props.authenticated ? (
-                                    <ul>
-                                        <li>
-                                            <NavLink to="/profile">Profile</NavLink>
-                                        </li>
-                                        <li>
-                                            <a onClick={this.props.onLogout}>Logout</a>
-                                        </li>
-                                    </ul>
-                                ): (
-                                    <ul>
-                                        <li>
-                                            <NavLink to="/login">Login</NavLink>        
-                                        </li>
-                                        <li>
-                                            <NavLink to="/signup">Signup</NavLink>        
-                                        </li>
-                                    </ul>
-                                )}
-                        </nav>
-                    </div>
-                </div>
-                </header>
-        )
-    }
+  const handleSignUpHover = () => {
+    setShowSignUp(true);
+  };
+
+  const handleSignUpLeave = () => {
+    setShowSignUp(false);
+  };
+
+  return (
+    <header className="app-header">
+      <div className="left-corner">
+        <a href="https://www.ocpgroup.ma/">
+            <img src={logo} alt="OCP Logo" className="logo" />
+        </a>
+
+      </div>
+      <div className="app-name">
+        <NavLink to="/" style={{color: 'white'}}>
+            OCPFoodHub
+        </NavLink>    
+        </div>
+
+      <div className="right-corner">
+        <div
+          className="login"
+          onMouseEnter={handleSignUpHover}
+          onMouseLeave={handleSignUpLeave}
+        >
+            <NavLink to="/login" style={{color: 'white'}}>
+          Login
+          {showSignUp && (
+            <div className="signup-dropdown">
+              <NavLink to="/signup"
+                style={{color: 'white'}}
+                className="signup-link">
+                Sign Up
+              </NavLink>
+            </div>
+          )}
+          </NavLink>
+        </div>
+      </div>
+
+    </header>
+  );
 }
 
 export default AppHeader;

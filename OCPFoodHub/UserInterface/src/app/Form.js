@@ -1,94 +1,34 @@
-import React, { Component } from "react";
-import "./Form.css";
-import { ACCESS_TOKEN } from "../resources";
-import { reserve } from "../common/APIUtils";
-import Alert from "react-s-alert";
+import React, { useState } from 'react';
 
-class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      guests: "",
-      date: "",
-      time: ""
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
-  handleInputChange(event) {
-    const target = event.target;
-    const inputName = target.name;
-    const inputValue = target.value;
+function Form(props) {
+  const [reservationDate, setReservationDate] = useState('');
+  const [reservationTime, setReservationTime] = useState('');
+  const [numberOfGuests, setNumberOfGuests] = useState('');
+  const [order, setOrder] = useState('');
 
-    this.setState({
-      [inputName]: inputValue
-    });
-  }
+  // Access the selected restaurant data from props.location.state
+  const selectedRestaurant = props.location.state.selectedRestaurant;
 
-  handleSubmit(event) {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    const reserveRequest = Object.assign({}, this.state);
+    // Here, you can handle the form submission, including the selected restaurant data.
+    console.log('Selected Restaurant:', selectedRestaurant);
+    
+    // After handling the submission, you can clear the form inputs if needed.
+    setReservationDate('');
+    setReservationTime('');
+    setNumberOfGuests('');
+    setOrder('');
+  };
 
-    reserve(reserveRequest)
-      .then(response => {
-        localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-        Alert.success("You're successfully logged in!");
-        this.props.history.push("/preorder");
-      })
-      .catch(error => {
-        Alert.error(
-          (error && error.message) || "Something went wrong. Please try again!"
-        );
-      });
-  }
-  render() {
-    return (
-      <center>
-        <div id="reserve">
-          <form onSubmit={this.handleSubmit}>
-            <h1>RESERVATION</h1>
-            <input
-              type="text"
-              id="form1"
-              name="guests"
-              value={this.state.guests}
-              onChange={this.handleInputChange}
-              placeholder="Number of Guests"
-              autoComplete="off"
-              required
-            />
-            <br />
-            <input
-              type="text"
-              id="form2"
-              name="date"
-              value={this.state.date}
-              onChange={this.handleInputChange}
-              placeholder="Date"
-              autoComplete="off"
-              required
-            />
-            <br />
-            <input
-              type="text"
-              id="form3"
-              name="time"
-              value={this.state.time}
-              onChange={this.handleInputChange}
-              placeholder="Time"
-              autoComplete="off"
-              required
-            />
-            <div id="book">
-              <button>Book Table</button>
-            </div>
-          </form>
-        </div>
-      </center>
-    );
-  }
+  return (
+    <div>
+      <h2>Reservation and Order Form for {selectedRestaurant.name}</h2>
+      {/* Rest of your form */}
+    </div>
+  );
 }
 
 export default Form;
