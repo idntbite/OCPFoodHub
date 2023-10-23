@@ -1,7 +1,7 @@
 
 # OCPFoodHub 🍔
 
-Welcome to OCPFoodHub, a  platform designed to make food reservation easier for employees and automate the ordering procedures within the food industry in the Gentour region (Youssoufia & Bneguerir) (at least within thr integrated OCP food services). This repository encompasses both frontend and backend components, ensuring a holistic and seamless experience for users and service providers.
+Welcome to OCPFoodHub, a  platform designed to make food reservation easier for employees and automate the ordering procedures within the food industry in the Gentour region (Youssoufia & Bneguerir) (at least for the OCP food providers). This repository encompasses both frontend and backend components, ensuring a holistic and seamless experience for users and service providers.
 
 ## Table of Contents
 
