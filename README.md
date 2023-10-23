@@ -108,7 +108,7 @@ When considering deployment, it's essential to factor in the costs associated wi
 
 ## Contributing
 
-We're open to contributions from the community. If you're keen on enhancing features, refining documentation, or rectifying bugs, please send a pull request.
+We're open to contributions from the community. If you're keen on enhancing features, refining documentation, rectifying bugs, or sponsoring deployment, please send a pull request.
 
 ## License
 
