@@ -16,7 +16,7 @@ Welcome to OCPFoodHub, a  platform designed to make food reservation easier for 
 
 ## Overview
 
-OCPFoodHub is designed to bridge the gap between customers and food service providers. Whether you're a customer seeking your next meal or a service provider aiming to expand your reach, OCPFoodHub caters to all.
+OCPFoodHub is designed to bridge the gap between customers and OCP food service providers. Whether you're a customer seeking your next meal or a service provider aiming to expand your reach, OCPFoodHub caters to all.
 
 ## Tech Stack
 
@@ -113,11 +113,3 @@ We're open to contributions from the community. If you're keen on enhancing feat
 ## License
 
 This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for more details.
-
----
-
-This README provides a comprehensive overview of the OCPFoodHub repository. You can further customize it to better fit the specifics of the project or any additional details you'd like to include.
-
----
-
-By the way, you're currently on the free plan which has a limited number of requests. To increase your quota, you can check out the available plans [here](https://c7d59216ee8ec59bda5e51ffc17a994d.auth.portal-pluginlab.ai/pricing).
