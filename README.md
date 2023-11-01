@@ -18,6 +18,13 @@ Welcome to OCPFoodHub, a  platform designed to make food reservation easier for 
 
 OCPFoodHub is designed to bridge the gap between customers and OCP food service providers. Whether you're a customer seeking your next meal or a service provider aiming to expand your reach, OCPFoodHub caters to all.
 
+![OCPFoodHub Shot 1](AppSnips/OCPFoodHub_shot1.png)
+
+![OCPFoodHub Shot 2](AppSnips/OCPFoodHub_shot2.png)
+
+![OCPFoodHub Login](AppSnips/OCPFoodHub_shot3.png)
+
+
 ## Tech Stack
 
 ### Backend
